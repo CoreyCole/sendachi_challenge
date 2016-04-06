@@ -7,8 +7,13 @@ package sendachi_rovers;
  * Representation of a rover
  */
 public class Rover {
+	// position of the Rover
 	public Position pos;
 	
+	/**
+	 * Instantiate the Rover
+	 * @param pos the starting position of the Rover
+	 */
 	public Rover(String pos) {
 		int x = Integer.parseInt(pos.substring(0, 1));
 		int y = Integer.parseInt(pos.substring(1, 2));
@@ -16,6 +21,10 @@ public class Rover {
 		this.pos = new Position(x, y, dir);
 	}
 	
+	/**
+	 * Issue a String of commands to the Rover
+	 * @param commands String for the Rover to parse into movements
+	 */
 	public void go(String commands) {
 		for (int i = 0; i < commands.length(); i++) {
 			issueCommand(commands.substring(i, i+1));

@@ -11,12 +11,21 @@ public class Position {
 	private int y;
 	private String direction;
 	
+	/**
+	 * Instantiate the Position
+	 * @param x 
+	 * @param y
+	 * @param direction
+	 */
 	public Position(int x, int y, String direction) {
 		this.x = x;
 		this.y = y;
 		this.direction = direction;
 	}
 	
+	/**
+	 * Turns the Position left
+	 */
 	public void turnLeft() {
 		switch (direction) {
 			case "N":
@@ -36,6 +45,9 @@ public class Position {
 		}
 	}
 	
+	/**
+	 * Turns the Position right
+	 */
 	public void turnRight() {
 		switch (direction) {
 			case "N":
@@ -55,6 +67,9 @@ public class Position {
 		}
 	}
 	
+	/**
+	 * Move the Position forward
+	 */
 	public void moveForward() {
 		switch (direction) {
 			case "N":
@@ -74,6 +89,9 @@ public class Position {
 		}
 	}
 	
+	/**
+	 * Returns the String representation of this position
+	 */
 	public String toString() {
 		return "" + x + y + direction;
 	}
